@@ -23,16 +23,15 @@
 #include <php.h>
 
 #define PHP_IP2LOCATION_EXTNAME "ip2location"
-#define PHP_IP2LOCATION_VERSION "6.0.0"
+#define PHP_IP2LOCATION_VERSION "6.0.2"
+
+#define PHP_IP2LOCATION_PTR_RES_NAME "IP2Location Pointer"
 
 PHP_MINIT_FUNCTION(ip2location);
 PHP_MSHUTDOWN_FUNCTION(ip2location);
 PHP_MINFO_FUNCTION(ip2location);
 
 extern zend_module_entry ip2location_module_entry;
-#define phpext_geoip_ptr &ip2location_module_entry
-
-
 
 PHP_FUNCTION(ip2location_open);
 PHP_FUNCTION(ip2location_open_mem);
@@ -59,16 +58,5 @@ PHP_FUNCTION(ip2location_get_usagetype);
 PHP_FUNCTION(ip2location_get_all);
 PHP_FUNCTION(ip2location_close);
 PHP_FUNCTION(ip2location_delete_shm);
-
-ZEND_BEGIN_MODULE_GLOBALS(ip2location)
-        IP2Location *ip2location_ptr;
-ZEND_END_MODULE_GLOBALS(ip2location)
-
-#ifdef ZTS
-#define IP2LOCATION_G(v) TSRMG(ip2location_globals_id, zend_ip2location_globals *, v)
-#else
-#define IP2LOCATION_G(v) (ip2location_globals.v)
-#endif
-
 
 #endif 

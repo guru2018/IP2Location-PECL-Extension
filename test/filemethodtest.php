@@ -1,48 +1,48 @@
 
 <?php
         /*Test DB access using file mathod*/ 
-        ip2location_open('IP-COUNTRY-SAMPLE.BIN');
-        ip2location_open_mem(IP2LOCATION_FILE_IO);
-        echo ip2location_get_country_short("25.5.10.2");
+        $handle = ip2location_open('IP-COUNTRY-SAMPLE.BIN');
+        ip2location_open_mem($handle, IP2LOCATION_FILE_IO);
+        echo ip2location_get_country_short($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_country_long("25.5.10.2");
+        echo ip2location_get_country_long($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_region("25.5.10.2");
+        echo ip2location_get_region($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_city("25.5.10.2");
+        echo ip2location_get_city($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_isp("25.5.10.2");
+        echo ip2location_get_isp($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_latitude("25.5.10.2");
+        echo ip2location_get_latitude($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_longitude("25.5.10.2");
+        echo ip2location_get_longitude($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_domain("25.5.10.2");
+        echo ip2location_get_domain($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_zipcode("25.5.10.2");
+        echo ip2location_get_zipcode($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_timezone("25.5.10.2");
+        echo ip2location_get_timezone($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_netspeed("25.5.10.2");
+        echo ip2location_get_netspeed($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_iddcode("25.5.10.2");
+        echo ip2location_get_iddcode($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_areacode("25.5.10.2");
+        echo ip2location_get_areacode($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_weatherstationcode("25.5.10.2");
+        echo ip2location_get_weatherstationcode($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_weatherstationname("25.5.10.2");
+        echo ip2location_get_weatherstationname($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_mcc("25.5.10.2");
+        echo ip2location_get_mcc($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_mnc("25.5.10.2");
+        echo ip2location_get_mnc($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_mobilebrand("25.5.10.2");
+        echo ip2location_get_mobilebrand($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_elevation("25.5.10.2");
+        echo ip2location_get_elevation($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_get_usagetype("25.5.10.2");
+        echo ip2location_get_usagetype($handle, "25.5.10.2");
         echo "\n";
-        echo ip2location_close();
-?>
+        echo ip2location_close($handle);
+ ?>
 
